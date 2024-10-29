@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activity.Home">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/ToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:fontFamily="@font/metropolisregular"
+                android:text="Title"
+                android:textColor="#4A4B4D"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <ImageView
+                android:id="@+id/CartButton"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_cart" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/MainFrameLayout"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FabButton"
+            android:layout_width="wrap_content"
+            app:layout_anchor="@id/BottomAppbar"
+            app:backgroundTint="@color/black"
+            app:tint="@color/white"
+            android:src="@drawable/restaurant_icon"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/BottomAppbar"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/BottomNavView"
+                android:layout_width="match_parent"
+                android:backgroundTint="@null"
+                android:layout_marginEnd="16dp"
+                android:theme="@style/AppThemeOverlay.MyTheme.BottomNavigationView"
+                app:menu="@menu/home_tabmenu"
+                android:layout_height="match_parent">
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

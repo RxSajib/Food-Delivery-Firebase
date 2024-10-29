@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/FoodImage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_15sdp"
+            android:scaleType="centerCrop"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_120sdp" />
+
+        <TextView
+            android:id="@+id/FoodTitle"
+            app:layout_constraintTop_toBottomOf="@id/FoodImage"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Cafe Di Onno"
+            android:textColor="@color/black"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/FoodMadeBy"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/metropolisregular"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="Cafe"
+            app:layout_constraintTop_toBottomOf="@+id/FoodTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/FoodLocation"
+            app:layout_constraintTop_toTopOf="@id/FoodMadeBy"
+            app:layout_constraintStart_toEndOf="@id/FoodMadeBy"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_8ssp"
+            android:text="Western Food"
+            app:layout_constraintBottom_toBottomOf="@id/FoodMadeBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RatingBar
+            android:id="@+id/Rating"
+            app:layout_constraintTop_toTopOf="@+id/FoodLocation"
+            app:layout_constraintBottom_toBottomOf="@id/FoodLocation"
+            app:layout_constraintStart_toEndOf="@id/FoodLocation"
+            android:numStars="5"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/RatingNumber"
+            app:layout_constraintTop_toTopOf="@+id/Rating"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_8ssp"
+            android:text="4.9"
+            android:textColor="@color/loginbutton_color"
+            app:layout_constraintStart_toEndOf="@id/Rating"
+            app:layout_constraintBottom_toBottomOf="@id/Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

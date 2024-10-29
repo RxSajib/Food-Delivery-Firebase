@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.BottomNavigationView.Menu">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_rightarraw_bg"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/FoodCard"
+            app:layout_constraintEnd_toEndOf="@+id/FoodCard"
+            app:layout_constraintStart_toEndOf="@+id/FoodCard"
+            app:layout_constraintTop_toTopOf="@+id/FoodCard">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/right_arraw" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_rightarraw_bg"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/BeveragesCard"
+            app:layout_constraintEnd_toEndOf="@+id/BeveragesCard"
+            app:layout_constraintStart_toEndOf="@+id/BeveragesCard"
+            app:layout_constraintTop_toTopOf="@+id/BeveragesCard">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/right_arraw" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_rightarraw_bg"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/DessertsCard"
+            app:layout_constraintEnd_toEndOf="@+id/DessertsCard"
+            app:layout_constraintStart_toEndOf="@+id/DessertsCard"
+            app:layout_constraintTop_toTopOf="@+id/DessertsCard">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/right_arraw" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_rightarraw_bg"
+            android:elevation="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/PromotionsCard"
+            app:layout_constraintEnd_toEndOf="@+id/PromotionsCard"
+            app:layout_constraintStart_toEndOf="@+id/PromotionsCard"
+            app:layout_constraintTop_toTopOf="@+id/PromotionsCard">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/right_arraw" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/SearchFood"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/metropolisregular"
+            android:hint="Search food"
+            android:editable="false"
+            android:drawablePadding="@dimen/_7sdp"
+            android:drawableLeft="@drawable/ic_search"
+            app:layout_goneMarginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:id="@+id/LeftView"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/menu_leftviewbg"
+            app:layout_constraintBottom_toTopOf="@+id/Space"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SearchFood" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:elevation="@dimen/_6sdp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food"
+            app:layout_constraintBottom_toBottomOf="@+id/FoodCard"
+            app:layout_constraintEnd_toStartOf="@+id/FoodCard"
+            app:layout_constraintStart_toStartOf="@+id/FoodCard"
+            app:layout_constraintTop_toTopOf="@+id/FoodCard" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/FoodCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginLeft="@dimen/_50sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="@+id/LeftView"
+            android:layout_marginRight="@dimen/_25sdp"
+            app:layout_constraintBottom_toTopOf="@+id/BeveragesCard"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SearchFood">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/FoodCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rtihadaltismediumregular"
+                    android:text="Food"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/FoodItemSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/FoodItemSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="0 Item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/FoodCount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="@dimen/_60sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/beverages"
+            android:elevation="@dimen/_6sdp"
+            app:siRadius="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/BeveragesCard"
+            app:layout_constraintEnd_toStartOf="@+id/BeveragesCard"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/BeveragesCard"
+            app:layout_constraintTop_toTopOf="@+id/BeveragesCard"
+            android:layout_height="@dimen/_60sdp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/BeveragesCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginLeft="@dimen/_50sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/DessertsCard"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/FoodCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Beverages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rtihadaltismediumregular"
+                    android:text="Beverages"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/BeveragesCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/BeveragesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="0 Item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Beverages" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/DessertsCard"
+            app:layout_constraintEnd_toStartOf="@+id/DessertsCard"
+            android:src="@drawable/de"
+            android:scaleType="centerCrop"
+            android:elevation="@dimen/_6sdp"
+            app:siSquare="true"
+            app:layout_constraintStart_toStartOf="@+id/DessertsCard"
+            app:layout_constraintTop_toTopOf="@+id/DessertsCard"
+            android:layout_height="@dimen/_60sdp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/DessertsCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginLeft="@dimen/_50sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/PromotionsCard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BeveragesCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Deserts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rtihadaltismediumregular"
+                    android:text="Desserts"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/DesertsCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/DesertsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:text="0 Item"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Deserts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/PromotionsCard"
+            app:layout_constraintEnd_toStartOf="@+id/PromotionsCard"
+            android:src="@drawable/promotins"
+            android:scaleType="centerCrop"
+            android:elevation="@dimen/_6sdp"
+            app:layout_constraintStart_toStartOf="@+id/PromotionsCard"
+            app:layout_constraintTop_toTopOf="@+id/PromotionsCard"
+            android:layout_height="@dimen/_60sdp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/PromotionsCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginLeft="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/LeftView"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DessertsCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Promotions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rtihadaltismediumregular"
+                    android:text="Promotions"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/PromotionsCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/PromotionsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:text="0 Item"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Promotions" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <RelativeLayout
+            android:id="@+id/Space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

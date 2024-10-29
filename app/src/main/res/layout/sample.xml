@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/FoodImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/add_fabbg"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ScrollView">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_loveselected" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_170sdp"
+        android:elevation="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/fooddetails_cardbg"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/FoodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="Tandoori Chicken Prizza"
+                    android:textColor="#4A4B4D"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/Rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:numStars="5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/FoodName" />
+
+                <TextView
+                    android:id="@+id/RatingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="4 Start Rating"
+                    android:textColor="@color/loginbutton_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Rating" />
+
+                <TextView
+                    android:id="@+id/Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="\u09F3 750"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/Rating" />
+
+                <TextView
+                    android:id="@+id/ParProtion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="/per Portion"
+                    app:layout_constraintStart_toStartOf="@+id/Price"
+                    app:layout_constraintTop_toBottomOf="@+id/Price" />
+
+                <TextView
+                    android:id="@+id/DescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="Description"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ParProtion" />
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="@string/appbar_scrolling_view_behavior"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DescriptionText" />
+
+                <View
+                    android:id="@+id/View"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="#BDBDBD"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+                <TextView
+                    android:id="@+id/CustomizeyourorderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="Customize your Order"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/View" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/PertionSpinnerBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/orderspinner_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CustomizeyourorderText">
+
+                    <TextView
+                        android:id="@+id/PortionInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:fontFamily="@font/metropolisregular"
+                        android:text="-Select the size of portion-"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:src="@drawable/pertion_spinner_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/IngredientsSpinnerBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/orderspinner_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PertionSpinnerBox">
+
+                    <TextView
+                        android:id="@+id/IngredientsInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:fontFamily="@font/metropolisregular"
+                        android:text="-Select the size of ingredients-"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:src="@drawable/pertion_spinner_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/NumberPortionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="Number of Portions"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IngredientsSpinnerBox" />
+
+
+                <TextView
+                    android:id="@+id/PlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/fooddetails_portionscounterbg"
+                    android:elevation="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_13sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_13sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/NumberPortionText"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/NumberPortionText"></TextView>
+
+                <TextView
+                    android:id="@+id/FoodCountResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/fooddetails_portionresult"
+                    android:elevation="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_13sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_13sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="0"
+                    android:textColor="@color/loginbutton_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/PlusButton"
+                    app:layout_constraintEnd_toStartOf="@+id/PlusButton"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/PlusButton"></TextView>
+
+                <TextView
+                    android:id="@+id/MinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/fooddetails_portionscounterbg"
+                    android:elevation="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_13sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_13sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/FoodCountResult"
+                    app:layout_constraintEnd_toStartOf="@+id/FoodCountResult"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/FoodCountResult">
+
+                </TextView>
+
+
+                <View
+                    android:id="@+id/PriceView"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/menu_leftviewbg"
+                    app:layout_constraintTop_toBottomOf="@+id/NumberPortionText"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_120sdp">
+
+                </View>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_rightarraw_bg"
+                    android:elevation="@dimen/_3sdp"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/TotalPriceView"
+                    app:layout_constraintEnd_toEndOf="@+id/TotalPriceView"
+                    app:layout_constraintStart_toEndOf="@+id/TotalPriceView"
+                    app:layout_constraintTop_toTopOf="@+id/TotalPriceView">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_cart"
+                        app:tint="@color/loginbutton_color" />
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/TotalPriceView"
+                    app:layout_constraintTop_toTopOf="@+id/PriceView"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/PriceView"
+                    android:layout_width="match_parent"
+                    android:elevation="@dimen/_1sdp"
+                    android:background="@drawable/pricebox_bg"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_100sdp">
+
+
+                    <TextView
+                        android:id="@+id/TotalPriceText"
+                        android:text="Total Price"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/CartPriceText"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/CartPriceText"
+                        android:text="\u09F3 200"
+                        app:layout_constraintTop_toBottomOf="@+id/TotalPriceText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="@dimen/_20ssp"
+                        app:layout_constraintBottom_toTopOf="@+id/AddCartButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/AddCartButton"
+                        android:layout_width="0dp"
+                        android:background="@drawable/loginbutton_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/CartPriceText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintWidth_percent=".5"
+                        android:layout_height="@dimen/_28sdp">
+
+                        <ImageView
+                            android:id="@+id/Carticon"
+                            android:src="@drawable/ic_addcar"
+                            app:tint = "@color/white"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:text="Add to Cart"
+                            android:fontFamily="@font/metropolisregular"
+                            app:layout_constraintTop_toTopOf="@+id/Carticon"
+                            app:layout_constraintBottom_toBottomOf="@+id/Carticon"
+                            app:layout_constraintStart_toEndOf="@+id/Carticon"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:background="@drawable/dialoag_bg"
+                android:paddingTop="@dimen/_25sdp"
+                android:paddingBottom="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/Icon"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:src="@drawable/logouticon" />
+
+
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:gravity="center_horizontal"
+                    android:text="Logout Account"
+                    android:textColor="@color/carbon_red_400"
+                    android:textSize="@dimen/_15ssp" />
+
+
+                <TextView
+                    android:id="@+id/Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Title"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/logout_details"
+                    app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_below="@+id/Details"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/StayButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/nothanksbutton_bg"
+                    >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/metropolisbold"
+                            android:text="Stay"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        app:layout_constraintStart_toEndOf="@+id/StayButton"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:id="@+id/ContinueButton"
+                        android:layout_weight="1"
+                        android:layout_toEndOf="@+id/StayButton"
+                        android:background="@drawable/continuebutton_bg"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/metropolisbold"
+                            android:text="Continue"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+</layout>

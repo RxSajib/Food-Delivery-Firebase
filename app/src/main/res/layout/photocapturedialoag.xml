@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:background="@drawable/dialoag_bg"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_150sdp">
+
+
+            <TextView
+                android:id="@+id/Title"
+                android:text="Please select your photo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/metropolisregular"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+        <View
+            android:id="@+id/TopView"
+            app:layout_constraintEnd_toEndOf="@id/OrText"
+            app:layout_constraintStart_toStartOf="@id/OrText"
+            app:layout_constraintBottom_toTopOf="@id/OrText"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/Title"
+            android:background="@color/carbon_black_54"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@color/carbon_black_54"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/OrText"
+                app:layout_constraintStart_toStartOf="@id/OrText"
+                app:layout_constraintTop_toBottomOf="@id/OrText" />
+
+
+
+            <ImageView
+                android:id="@+id/GalleryIcon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintBottom_toTopOf="@+id/GalleryText"
+                android:src="@drawable/img_gallery"
+                app:layout_constraintEnd_toStartOf="@+id/OrText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Title"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/GalleryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/metropolismedium"
+                android:text="Gallery"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/GalleryIcon"
+                app:layout_constraintStart_toStartOf="@id/GalleryIcon"
+                app:layout_constraintTop_toBottomOf="@id/GalleryIcon" />
+
+
+        <TextView
+            android:id="@+id/OrText"
+            app:layout_constraintTop_toBottomOf="@id/Title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/carbon_green_400"
+            android:text="OR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+            <ImageView
+                android:id="@+id/CameraIcon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toTopOf="@id/CameraText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/OrText"
+                app:layout_constraintTop_toBottomOf="@+id/Title"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/CameraText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/metropolismedium"
+                android:text="Camera"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@id/CameraIcon"
+                app:layout_constraintStart_toStartOf="@id/CameraIcon"
+                app:layout_constraintTop_toBottomOf="@id/CameraIcon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

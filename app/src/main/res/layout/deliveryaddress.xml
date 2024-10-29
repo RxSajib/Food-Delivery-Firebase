@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="FirstName"
+            type="String" />
+
+        <variable
+            name="LastName"
+            type="String" />
+
+        <variable
+            name="PhoneNumber"
+            type="String" />
+
+        <variable
+            name="MRPTotal"
+            type="Integer" />
+
+        <variable
+            name="DeliveryCharge"
+            type="Integer" />
+
+        <variable
+            name="TotalPrice"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activity.DeliveryAddress">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+
+            <ImageView
+                android:id="@+id/BackButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp" />
+
+            <TextView
+                android:id="@+id/ToolbarTitle"
+                app:layout_constraintTop_toTopOf="@id/BackButton"
+                app:layout_constraintStart_toEndOf="@id/BackButton"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="Deliver Address"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/metropolisregular"
+                app:layout_constraintBottom_toBottomOf="@id/BackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Toolbar">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/BellingDetailsText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Billing Details"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".9" />
+
+
+                <TextView
+                    android:id="@+id/Details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="Please provide all info for create successfully order"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BellingDetailsText"
+                    app:layout_constraintWidth_percent=".9" />
+
+
+                <TextView
+                    android:id="@+id/FirstNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="First Name*"
+                    app:layout_constraintEnd_toStartOf="@+id/LastNameText"
+                    app:layout_constraintStart_toStartOf="@id/Details"
+                    app:layout_constraintTop_toBottomOf="@+id/Details" />
+
+
+                <TextView
+                    android:id="@+id/LastNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Last Name*"
+                    app:layout_constraintEnd_toEndOf="@id/Details"
+                    app:layout_constraintStart_toEndOf="@+id/FirstNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/Details" />
+
+
+                <EditText
+                    android:id="@+id/FirstNameInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/FirstNameText"
+                    app:layout_constraintStart_toStartOf="@+id/FirstNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/FirstNameText" />
+
+                <EditText
+                    android:id="@+id/LastNameInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/LastNameText"
+                    app:layout_constraintStart_toStartOf="@+id/LastNameText"
+                    app:layout_constraintTop_toBottomOf="@+id/LastNameText" />
+
+                <TextView
+                    android:id="@+id/PhoneNumText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Phone Number*"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/FirstNameInput"
+                    app:layout_constraintWidth_percent=".9" />
+
+                <EditText
+                    android:id="@+id/PhoneNumberInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/PhoneNumText"
+                    app:layout_constraintStart_toStartOf="@+id/PhoneNumText"
+                    app:layout_constraintTop_toBottomOf="@+id/PhoneNumText" />
+
+                <TextView
+                    android:id="@+id/AddressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Street Address*"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PhoneNumberInput"
+                    app:layout_constraintWidth_percent=".9" />
+
+                <EditText
+                    android:id="@+id/AddressInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/AddressText"
+                    app:layout_constraintStart_toStartOf="@+id/AddressText"
+                    app:layout_constraintTop_toBottomOf="@+id/AddressText" />
+
+                <TextView
+                    android:id="@+id/CityTownText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Town/City*"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AddressInput"
+                    app:layout_constraintWidth_percent=".9" />
+
+                <EditText
+                    android:id="@+id/TownCityInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/CityTownText"
+                    app:layout_constraintStart_toStartOf="@+id/CityTownText"
+                    app:layout_constraintTop_toBottomOf="@+id/CityTownText" />
+
+
+                <TextView
+                    android:id="@+id/AreaText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Area*"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TownCityInput"
+                    app:layout_constraintWidth_percent=".9" />
+
+                <EditText
+                    android:id="@+id/AreaInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:padding="@dimen/_6sdp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="@+id/AreaText"
+                    app:layout_constraintStart_toStartOf="@+id/AreaText"
+                    app:layout_constraintTop_toBottomOf="@+id/AreaText" />
+
+                <TextView
+                    android:id="@+id/OrderNoteText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Order Note"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AreaInput"
+                    app:layout_constraintWidth_percent=".9" />
+
+                <EditText
+                    android:id="@+id/OrderNoteInput"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/bellininputbg"
+                    android:gravity="start"
+                    android:padding="@dimen/_6sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/OrderNoteText"
+                    app:layout_constraintStart_toStartOf="@+id/OrderNoteText"
+                    app:layout_constraintTop_toBottomOf="@+id/OrderNoteText" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/DetailsOfOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/prouct_bg"
+                    android:elevation="0.4dp"
+                    android:outlineAmbientShadowColor="#02ABB2"
+                    android:outlineSpotShadowColor="#02ABB2"
+                    android:padding="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/OrderNoteInput"
+                    app:layout_constraintWidth_percent=".9">
+
+                    <TextView
+                        android:id="@+id/YourOrderText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="Your Order"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/SubTotalText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:singleLine="true"
+                        android:text="Subtotal"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toStartOf="@+id/SubTotal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/YourOrderText" />
+
+                    <TextView
+                        android:id="@+id/SubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="@{`\u09F3`+String.format(`%,d`, MRPTotal)}"
+                        app:layout_constraintBottom_toBottomOf="@id/SubTotalText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/SubTotalText" />
+
+                    <TextView
+                        android:id="@+id/DeliveryChargesText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:singleLine="true"
+                        android:text="Delivery Charge"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toStartOf="@+id/SubTotal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/SubTotalText" />
+
+                    <TextView
+                        android:id="@+id/DeliveryCharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="60"
+                        app:layout_constraintBottom_toBottomOf="@id/DeliveryChargesText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/DeliveryChargesText" />
+
+                    <TextView
+                        android:id="@+id/TotalText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:singleLine="true"
+                        android:text="Total"
+                        android:textColor="#03A9F4"
+                        app:layout_constraintEnd_toStartOf="@+id/Total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/DeliveryChargesText" />
+
+                    <TextView
+                        android:id="@+id/Total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="@{`\u09F3 `+String.format(`%,d`, TotalPrice)}"
+                        android:textColor="#03A9F4"
+                        app:layout_constraintBottom_toBottomOf="@id/TotalText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/TotalText" />
+
+                    <TextView
+                        android:id="@+id/PaymentMethodText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="Payment Methoids"
+                        android:textColor="#333333"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/TotalText" />
+
+                    <RadioGroup
+                        android:id="@+id/RadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@+id/PaymentMethodText"
+                        app:layout_constraintTop_toBottomOf="@+id/PaymentMethodText">
+
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:checked="true"
+                            android:onClick="RadioClick"
+                            android:text="Cash on delivery" />
+
+                    </RadioGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/PlaceOrderBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/carbon_orange_400"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DetailsOfOrder"
+                    app:layout_constraintWidth_percent=".9"
+                    app:shapeAppearanceOverlay="@style/shape_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Place Order"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/PlaceOrderBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/PlaceOrderBtn"
+                    app:layout_constraintStart_toStartOf="@+id/PlaceOrderBtn"
+                    app:layout_constraintTop_toTopOf="@+id/PlaceOrderBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

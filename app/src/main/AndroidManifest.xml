@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mealmonkey">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MealMonkeyFoodDeleveryJava"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".UI.Activity.OrderProduct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite"/>
+        <activity
+            android:name=".UI.Activity.MyOrder"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.DeliveryAddress"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.AccountHome"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranprentStatusbar" />
+        <activity
+            android:name=".UI.Activity.BookMark"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.FoodHomeOffer"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.CountryFood"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.FoodSearch"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.AddCart"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.Promotions"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.Desserts"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.Beverage"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.FoodMenu"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.SignUp"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.PaymentDetails"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.FoodDetails"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranprentStatusbar" />
+        <activity
+            android:name=".UI.Activity.Home"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.SignIn"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusbarWhite" />
+        <activity
+            android:name=".UI.Activity.GetStart"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransprentStatusnar" />
+        <activity
+            android:name=".UI.Activity.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransprentStatusnar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

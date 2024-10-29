@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.BottomNavigationView.FoodHome">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/CovidHeadLine"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Covid headline ..."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    />
+
+                <TextView
+                    android:id="@+id/DeleveringTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="Delivering to"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CovidHeadLine" />
+
+                <TextView
+                    android:id="@+id/LocationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/metropolisbold"
+                    android:text="Current Location"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DeleveringTO" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:src="@drawable/more_arraw"
+                    app:layout_constraintBottom_toBottomOf="@+id/LocationText"
+                    app:layout_constraintStart_toEndOf="@+id/LocationText"
+                    app:layout_constraintTop_toTopOf="@+id/LocationText"
+                    app:tint="@color/loginbutton_color" />
+
+                <EditText
+                    android:id="@+id/SearchInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:editable="false"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:hint="Search food"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LocationText" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SearchInput">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/FoodOfferButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/offerfood" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/metropolisbold"
+                                android:text="Offers" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/SriLankaButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/srilankafood" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/metropolisbold"
+                                android:text="Sri Lankan" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ItalianButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/italianfood" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/metropolisbold"
+                                android:text="Italian" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/IndiaButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/indianfood" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/metropolisbold"
+                                android:text="Indian" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/RestaurentsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Popular Restaurents"
+                    android:textColor="#4A4B4D"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HorizontalScrollView" />
+
+                <TextView
+                    android:id="@+id/RestaurentsViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="View All"
+                    android:textColor="@color/loginbutton_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/RestaurentsText"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/RestaurentsText" />
+
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/PopulatRestruntRecyclerView"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                   app:layout_constraintTop_toBottomOf="@+id/RestaurentsViewAll"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:id="@+id/MostPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Most Popular"
+                    android:visibility="gone"
+                    android:textColor="#4A4B4D"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PopulatRestruntRecyclerView" />
+
+                <TextView
+                    android:id="@+id/MostPopularAll"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="View All"
+                    android:textColor="@color/loginbutton_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/MostPopular"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/MostPopular" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/PopularRecyclerView"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/MostPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/NewFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="New Food"
+                    android:textColor="#4A4B4D"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PopularRecyclerView" />
+
+                <TextView
+                    android:id="@+id/NewFoodAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:text="View All"
+                    android:textColor="@color/loginbutton_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/NewFood"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/NewFood" />
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/NewFoodRecyclerView"
+                  app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                  app:layout_constraintTop_toBottomOf="@+id/NewFood"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NewFoodRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

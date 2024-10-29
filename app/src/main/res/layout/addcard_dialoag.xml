@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/addcard_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/carbon_black_38"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Add Credit/Debit Card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Toolbar">
+
+
+                <EditText
+                    android:id="@+id/CardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:hint="Card Number"
+                    android:padding="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10ssp"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Expiry"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/CardNumber" />
+
+                <EditText
+                    android:id="@+id/YearEdittext"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:gravity="center"
+                    android:inputType="date"
+                    android:hint="YY"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="@id/Expiry"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/Expiry" />
+
+
+                <EditText
+                    android:id="@+id/MonthEdittext"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:gravity="center"
+                    android:inputType="date"
+                    android:hint="MM"
+                    android:padding="@dimen/_10ssp"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="@id/YearEdittext"
+                    app:layout_constraintEnd_toStartOf="@+id/YearEdittext"
+                    app:layout_constraintTop_toTopOf="@id/YearEdittext" />
+
+
+                <EditText
+                    android:id="@+id/SequrityCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:hint="Sequrity Code"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10ssp"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/MonthEdittext" />
+
+                <EditText
+                    android:id="@+id/FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:padding="@dimen/_10ssp"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/SequrityCode" />
+
+
+                <EditText
+                    android:id="@+id/LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/metropolisregular"
+                    android:hint="Last Name"
+                    android:padding="@dimen/_12ssp"
+                    android:paddingLeft="@dimen/_10ssp"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/FirstName" />
+
+
+                <TextView
+                    android:id="@+id/CardInfoText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LastName"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/metropolismedium"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="You can remove this card\nat anytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Switch
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintTop_toTopOf="@+id/CardInfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/AddCardButton"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/CardInfoText"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/loginbutton_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <ImageView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/Addicon"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/white"
+                        app:layout_constraintEnd_toStartOf="@+id/Text"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                    <TextView
+                        android:id="@+id/Text"
+                        app:layout_constraintTop_toTopOf="@+id/Addicon"
+                        app:layout_constraintStart_toEndOf="@+id/Addicon"
+                        app:layout_constraintBottom_toBottomOf="@id/Addicon"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/metropolismedium"
+                        android:text="Add Credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

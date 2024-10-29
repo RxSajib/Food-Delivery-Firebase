@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="MRPTotal"
+            type="String" />
+        <variable
+            name="TotalAmount"
+            type="String" />
+        <variable
+            name="DeliveryCharge"
+            type="String" />
+        <variable
+            name="AdditionalDiscount"
+            type="String" />
+        <variable
+            name="TotalSaving"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activity.AddCart">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+
+            <ImageView
+                android:id="@+id/BackButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp" />
+
+            <TextView
+                android:id="@+id/ToolbarTitle"
+                app:layout_constraintTop_toTopOf="@id/BackButton"
+                app:layout_constraintStart_toEndOf="@id/BackButton"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="Cart"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/metropolisregular"
+                app:layout_constraintBottom_toBottomOf="@id/BackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@id/Toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:id="@+id/PaymentDetailsText"
+                app:layout_constraintTop_toBottomOf="@+id/RecyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:visibility="visible"
+                android:text="Payment Details"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/metropolismedium"
+                android:textColor="#333333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/PriceBox"
+                app:layout_constraintTop_toBottomOf="@+id/PaymentDetailsText"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:visibility="visible"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/prouct_bg"
+                android:elevation="0.4dp"
+                android:outlineAmbientShadowColor="#02ABB2"
+                android:outlineSpotShadowColor="#02ABB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/MRPTotalText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="MRP Total"
+                    android:singleLine="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/MRPTotal"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/MRPTotal"
+                    app:layout_constraintTop_toTopOf="@id/MRPTotalText"
+                    app:layout_constraintBottom_toBottomOf="@id/MRPTotalText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/metropolismedium"
+                    android:textColor="#333333"
+                    android:text="@{`\u09F3 `+MRPTotal}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:id="@+id/DeliveryChargesText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Delivery Charges"
+                    app:layout_constraintTop_toBottomOf="@+id/MRPTotalText"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/DeliveryCharges"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/DeliveryCharges"
+                    app:layout_constraintTop_toTopOf="@id/DeliveryChargesText"
+                    app:layout_constraintBottom_toBottomOf="@id/DeliveryChargesText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/metropolismedium"
+                    android:textColor="#333333"
+                    android:text="60"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/AdditionalDiscountText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Additional Discount"
+                    app:layout_constraintTop_toBottomOf="@+id/DeliveryChargesText"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/AdditionalDiscount"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/AdditionalDiscount"
+                    app:layout_constraintTop_toTopOf="@id/AdditionalDiscountText"
+                    app:layout_constraintBottom_toBottomOf="@id/AdditionalDiscountText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/metropolismedium"
+                    android:textColor="#333333"
+                    android:text="0%"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/TotalAmountText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Total Amount"
+                    app:layout_constraintTop_toBottomOf="@+id/AdditionalDiscountText"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/TotalAmount"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/metropolisregular"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/TotalAmount"
+                    app:layout_constraintTop_toTopOf="@id/TotalAmountText"
+                    app:layout_constraintBottom_toBottomOf="@id/TotalAmountText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/metropolismedium"
+                    android:textColor="#333333"
+                    android:text="@{`\u09F3 `+TotalAmount}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/TotalSavingBox"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/PriceBox"
+                app:layout_constraintStart_toStartOf="@+id/PriceBox"
+                app:layout_constraintEnd_toEndOf="@+id/PriceBox"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TotalSavingTex"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Total Saving"
+                    android:singleLine="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/TotalSaving"
+                    android:layout_width="0dp"
+                    android:textColor="#16D3DA"
+                    android:fontFamily="@font/metropolisregular"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/TotalSaving"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/metropolismedium"
+                    android:textColor="#16D3DA"
+                    android:text="0"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TotalSavingBox"
+                android:id="@+id/ProcessToCheckOut"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent=".95"
+                android:elevation="0.4dp"
+                android:outlineAmbientShadowColor="#02ABB2"
+                android:outlineSpotShadowColor="#02ABB2"
+                app:shapeAppearanceOverlay="@style/shape_button"
+                android:background="@drawable/loginbutton_bg"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"/>
+
+            <View
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProcessToCheckOut"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/CheckOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent=".9"
+                android:fontFamily="@font/metropolismedium"
+                android:text="Proceed to Checkout"
+                android:gravity="center"
+                android:elevation="@dimen/_1sdp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ProcessToCheckOut"
+                app:layout_constraintEnd_toEndOf="@+id/ProcessToCheckOut"
+                app:layout_constraintStart_toStartOf="@+id/ProcessToCheckOut"
+                app:layout_constraintTop_toTopOf="@+id/ProcessToCheckOut" />
+
+            <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/MessageIcon"
+                android:src="@drawable/ic_cart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/MessageText"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+
+            <TextView
+                android:id="@+id/MessageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your cart is empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MessageIcon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

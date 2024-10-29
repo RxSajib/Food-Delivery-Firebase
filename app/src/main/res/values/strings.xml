@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MealMonkeyFoodDeleveryJava</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout_details">Are you sure logout account? If you logout your account you can\'t tracking your order or can\'t found any update your order</string>
+
+    <string name="FirstNameEmpty">First name is require</string>
+    <string name="LastNameEmpty">Last name is require</string>
+    <string name="StreetAddressEmpty">Street address require</string>
+    <string name="TownCityEmpty">Town/City require</string>
+    <string name="SelectPaymentMethod">Select payment method</string>
+    <string name="AreaEmpty">Area is require</string>
+</resources>
